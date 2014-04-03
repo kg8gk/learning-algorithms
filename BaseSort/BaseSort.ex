@@ -14,6 +14,7 @@ defmodule BaseSort do
   end
 
   # 插入排序
+  def insertion([]), do: []
   def insertion(array), do: List.foldl(array, [], &insert/2)
   defp insert(key, []), do: [key]
   defp insert(key, array = [h|t]) do
